@@ -1,0 +1,33 @@
+<!-- Agregar o cambiar clase con '[ngClas]' -->
+<div [ngClass]="alertClass" class="alert mt-4 pt-2 pb-2 mb-1">
+    Alerta que cambia de <strong>clase</strong>.
+</div>
+
+<a class="btn btn-sm btn-primary text-light me-1" (click)="alertClass = 'alert-primary'">Clase Primary</a>
+<a class="btn btn-sm btn-secondary me-1" (click)="alertClass = 'alert-secondary'">Clase Secondary</a>
+
+<br>
+<br>
+
+
+<!-- Agregar o cambiar clase condicionalmente con '[ngClas]' -->
+<h4 [ngClass]="{ 'text-danger': objectClass.willDanger, 'text-secondary': !objectClass.willDanger }" class="mb-1">
+    Hola Mundo
+</h4>
+
+<a [ngClass]="{ 'btn-danger': objectClass.willDanger, 'btn-secondary': !objectClass.willDanger }" class="btn btn-primary btn-sm" (click)="objectClass.willDanger = !objectClass.willDanger">Cambiar Objeto</a>
+
+<br>
+<br>
+
+
+<!-- Procesos Asíncronos -->
+<h4 class="text-dark">Proceso Asíncrono</h4>
+
+<button class="btn btn-primary btn-sm" (click)="subirArchivo()" [disabled]="loading"><i [ngClass]="{ 'bi-upload': !loading, 'bi-arrow-repeat icon-spin' : loading }" class="bi bi-arrow-repeat"></i> 
+    {{ buttonText }}
+</button>
+
+
+<!-- Directiva Personalizada -->
+<p [Highlight]="'#E8E8E9'" class="mt-4">Directiva Personalizada</p>

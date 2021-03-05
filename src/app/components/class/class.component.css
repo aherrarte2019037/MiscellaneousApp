@@ -1,0 +1,30 @@
+[class^="bi-upload"]::before,
+[class*="bi-upload"]::before {
+  line-height: 17px;
+  font-size: 15px;
+  margin-right: 2px;
+}
+
+[class^="bi-arrow-repeat"]::before,
+[class*="bi-arrow-repeat"]::before {
+  line-height: 18px;
+  font-size: 17px;
+}
+
+[class^="icon-spin"]::before,
+[class*="icon-spin"]::before {
+  animation: spin 1s infinite linear;
+}
+
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}

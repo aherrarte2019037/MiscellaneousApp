@@ -1,0 +1,26 @@
+<div [ngSwitch]="alertType">
+
+
+<div *ngSwitchCase="'warning'" class="alert alert-warning">
+    Alerta con <strong>ngSwitch</strong>.
+</div>
+
+<div *ngSwitchCase="'info'" class="alert alert-info">
+    Alerta con <strong>ngSwitch</strong>.
+</div>
+
+<div *ngSwitchCase="'dark'" class="alert alert-dark">
+    Alerta con <strong>ngSwitch</strong>.
+</div>
+
+<div *ngSwitchDefault class="alert alert-danger">
+    Alerta con <strong>ngSwitch</strong>.
+</div>
+
+
+</div>
+
+
+<input class="form-control form-control-sm mb-1" type="text" placeholder="warning | info | dark Default = danger" #alertInput>
+
+<a (click)="alertType = alertInput.value" class="btn btn-primary btn-sm">Cambiar Alerta</a>

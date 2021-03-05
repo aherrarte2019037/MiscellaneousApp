@@ -1,0 +1,19 @@
+<nav class="navbar navbar-expand-sm bg-light navbar-light">
+
+    <div class="container-fluid">
+        
+      <a [routerLink]="['home']" class="navbar-brand" type="button">Miscellaneous</a>
+      <a class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar">
+        <span class="navbar-toggler-icon"></span>
+      </a>
+
+      <div class="collapse navbar-collapse" id="navbar">
+        <div class="navbar-nav">
+          <a [routerLink]="['home']" routerLinkActive="active" type="button" class="nav-link">Home</a>
+          <a [routerLink]="['user', 10]" routerLinkActive="active" type="button" class="nav-link">Usuario</a>
+        </div>
+      </div>
+
+    </div>
+
+  </nav>
